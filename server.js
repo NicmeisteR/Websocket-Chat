@@ -22,12 +22,13 @@ const server = express()
 
 const wss = new SocketServer({ server });
 
-wss.on('connection', (ws) => {
+wss.on('connection', socket => {
   console.log('Client connected');
   wss.on('close', () => console.log('Client disconnected'));
-  wss.on('message', message => {
+  socket.on('message', message => {
     wss.clients.forEach(client => {
       client.send(message);
+      console.log( message);
     });
   });
 });
