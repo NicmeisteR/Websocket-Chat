@@ -2,7 +2,7 @@ const HOST = location.origin.replace(/^http/, 'ws')
 const ws = new WebSocket(HOST);
 
 ws.onmessage = function (event) {
-    $('#server-time').innerHTML = 'Server time: ' + event.data;
+    // $('#server-time').innerHTML = 'Server time: ' + event.data;
 };
 
 ws.addEventListener('message', event => {
