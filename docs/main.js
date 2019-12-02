@@ -1,4 +1,6 @@
 const socket = new WebSocket('wss://nicmeister.herokuapp.com:8080');
+socket.onmessage = function(e){ console.log(e.data); };
+socket.onopen = () => conn.send('hello');
 
 socket.addEventListener('message', event => {
     let message = JSON.parse(event.data);
