@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+  
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Websocket Chat App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    <div class="container">
+        <br/>
+        <h1>Live Chat</h1>
+        <br/>
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1" id="username">
+                </div>
+        
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Your Message:</span>
+                    </div>
+                    <textarea class="form-control" aria-label="With textarea" id="message"></textarea>
+                </div>
+                <br/>
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="send">Send Message</button>
+            </div>
+            <div class="col-md-6">
+                <div class="chat">
+                    <table class="table table-dark" width="100%">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <span class="input-group-text input-group-prepend">Messages:</span>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody id="chat"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+      
+    </div>
+</body>
+<!-- <script type="module">
+    import WebSocket from "./node_modules/ws";
+  </script> -->
+<script src="jquery.min.js"></script>
+<!-- <script type="module" src="node_modules/ws"></script> -->
+<script src="main.js" type="module"></script>
+
+</html>

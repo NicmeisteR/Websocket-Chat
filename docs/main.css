@@ -1,0 +1,21 @@
+body {
+    background: #333333;
+}
+
+h1 {
+    color: white;
+}
+
+.navbar {
+     background-color: #4d4d4d !important;
+     height: 80px;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.chat {
+    height:700px;
+    overflow:auto;
+}
