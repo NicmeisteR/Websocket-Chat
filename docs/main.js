@@ -1,4 +1,4 @@
-const socket = new WebSocket('wss://nicmeister.herokuapp.com/:8080');
+const socket = new WebSocket('wss://nicmeister.herokuapp.com:8080');
 
 socket.addEventListener('message', event => {
     let message = JSON.parse(event.data);
