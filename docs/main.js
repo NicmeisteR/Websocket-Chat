@@ -1,11 +1,15 @@
-const socket = new WebSocket('wss://nicmeister.herokuapp.com:8080');
-socket.onmessage = function(e){ console.log(e.data); };
-socket.onopen = () => conn.send('hello');
+const HOST = location.origin.replace(/^http/, 'ws').replace(":5500", "");
+// const socket = new WebSocket(HOST + ":8080");
+const socket = new WebSocket("ws://192.168.15.164:8080");
 
 socket.addEventListener('message', event => {
     let message = JSON.parse(event.data);
     $("#chat").append(`<tr id="msg${messagesCount}"><td>${message.userName}: ${message.content}</td></tr>`);
 });
+
+socket.onmessage = function (event) {
+    console.log('Server time: ' + event.data);
+};
 
 socket.addEventListener('open', () => {
     // sendMessage(socket, "NicmeisteR", message);
