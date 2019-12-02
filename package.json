@@ -1,0 +1,30 @@
+{
+  "name": "websocket-chat",
+  "version": "1.0.0",
+  "description": "Websocket Chat App",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "ws": "^7.2.0",
+    "bootstrap": "^4.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicmeisteR/Websocket-Chat.git"
+  },
+  "author": "NicmeisteR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicmeisteR/Websocket-Chat/issues"
+  },
+  "homepage": "https://nicmeister.github.io/Websocket-Chat/"
+}
