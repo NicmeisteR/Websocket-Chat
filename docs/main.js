@@ -1,6 +1,6 @@
 const HOST = location.origin.replace(/^http/, 'ws').replace(":5500", "");
 // const socket = new WebSocket(HOST + ":8080");
-const socket = new WebSocket("ws://192.168.15.164:8080");
+const socket = new WebSocket("wss://192.168.15.164:8080");
 
 socket.addEventListener('message', event => {
     let message = JSON.parse(event.data);
