@@ -1,5 +1,11 @@
+import { Server } from "ws";
+
 const HOST = location.origin.replace(/^http/, 'ws')
-const ws = new WebSocket(HOST);
+// Use host for server setup.
+// const ws = new WebSocket(HOST);
+
+// Use chat.nicmeister.cloud for accessing remote Server.
+const ws = new WebSocket("wss://chat.nicmeister.cloud");
 
 ws.onmessage = function (event) {
     // $('#server-time').innerHTML = 'Server time: ' + event.data;
